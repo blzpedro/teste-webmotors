@@ -5,7 +5,9 @@ import { HomeContainer } from './Home/styles'
 function App() {
   return (
     <HomeContainer>
-      <img src="https://www.webmotors.com.br/assets/img/webmotors.svg?t=81" alt="logo webmotors"/>
+      <div style={{maxWidth: '933px', margin: '0 auto'}}>
+        <img src="https://www.webmotors.com.br/assets/img/webmotors.svg?t=81" alt="logo webmotors"/>
+      </div>
       <Home/>
     </HomeContainer>
   );

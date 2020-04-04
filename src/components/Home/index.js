@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Tabs from './components/Tabs'
 import { api } from '../../utils/request'
-import { Box } from './styles'
+import { Box, EndButton } from './styles'
 import Content from './components/Content';
 
 export default function Home() {
-    let activeTab;
     const [marcas, setMarcas ] = useState([])
     const [selectedTab, setSelectedTab] = useState('')
+    // const [activeTab, setActiveTab] = useState(false)
     const TABS = [
         {
             id: '1',
@@ -36,22 +36,29 @@ export default function Home() {
         .catch(err => console.log('Erro get marcas', err))
     }
 
-    const selectTab = event => {
-        let show = event.target.id
-        setSelectedTab(show)
+    function selectTab(id){        
+        setSelectedTab(id)
+        console.log(id)
     }
 
     return (
         <Box>
-            {TABS.map(tab => (
-                <Tabs
+            <div style={{display: 'flex'}}>
+                {TABS.map(tab => (
+                    <Tabs
                     tabName={tab.tabName}
                     tabIcon={tab.tabIcon}
                     id={tab.id}
-                    selectTab={selectTab}
-                    activeTab={activeTab}
-                />     
-            ))}
+                    handleTab={() => selectTab(tab.id)}
+                    activeTab={selectedTab === tab.id ? '2px solid red' : '2px solid transparent'}
+                    />     
+                ))}
+                <EndButton>
+                    <button>
+                        Vender meu carro
+                    </button>
+                </EndButton>
+            </div>
             <Content
                 selected={selectedTab}
             />
