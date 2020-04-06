@@ -16,7 +16,7 @@ export default function Vehicles({id, marca, model, version, image, km, price, y
                 <p>Preço: R$ {price}</p>
                 <p>Ano do modelo: {yearModel}</p>
             </div>
-            <img src={image}/>
+            <img src={image} alt="Carro da oferta"/>
         </VehicleBox>
     );
 }

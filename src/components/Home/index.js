@@ -1,4 +1,4 @@
-import React, { useEffect, useState, PureComponent } from 'react';
+import React, { useEffect, useState } from 'react';
 import Tabs from './components/Tabs'
 import { api } from '../../utils/request'
 import { Box, EndButton, Ofertas } from './styles'
@@ -14,6 +14,7 @@ export default function Home() {
     const [versao, setVersao] = useState('')
     const [vehicles, setVehicles] = useState([])
     const [vehiclesFilter, setVehiclesFilter] = useState([])
+    //eslint-disable-next-line
     const [preco, setPreco] = useState('')
     const [selectedTab, setSelectedTab] = useState(1)
     const TABS = [
@@ -166,7 +167,7 @@ export default function Home() {
             <option value={`${versao.ID}-${versao.Name}`}>{versao.Name}</option>
         )
     ))
-    
+
     return (
         <Box>
             <div style={{display: 'flex'}}>
