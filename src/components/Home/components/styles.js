@@ -23,9 +23,9 @@ export const stylesInput = createUseStyles({
         '& input':{
             borderRadius: 3,
             border: '1px solid #d4d4d4',
-            width: '48%',
+            width: '170px',
             padding: '10px'
-        }
+        },
     },
     input100:{
         width: '50%',
@@ -44,18 +44,51 @@ export const stylesInput = createUseStyles({
         height: 40,
         display: 'flex',
         padding: '10px',
-        '& input:first-child':{
-            width: '70%',
-            borderRadius: '3px 0px 0px 3px',
-            border: '1px solid #d4d4d4',
-            padding: '10px'
-        },
-        '& input':{
-            width: '30%',
-            borderRadius: '0px 3px 3px 0px',
-            border: '1px solid #d4d4d4',
-            padding: '10px'
-        }
+    },
+    fullInput70:{
+        borderRadius: '3px 0px 0px 3px',
+        border: '1px solid #d4d4d4',
+        padding: '10px',
+        width: '70%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    fullInput30:{
+        borderRadius: '0px 3px 3px 0px',
+        border: '1px solid #d4d4d4',
+        padding: '10px',
+        width: '30%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    fullInput50:{
+        borderRadius: '0px 3px 3px 0px',
+        border: '1px solid #d4d4d4',
+        padding: '10px',
+        width: '170px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    fullInput100:{
+        borderRadius: '0px 3px 3px 0px',
+        border: '1px solid #d4d4d4',
+        padding: '10px',
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    label:{
+        fontSize: 14,
+        color: '#d4d4d4'
+    },
+    default:{
+        border: 'none',
+        outline: 'none',
+        width: '-webkit-fill-available'
     },
     footer:{
         display: 'flex',
@@ -83,6 +116,35 @@ export const stylesInput = createUseStyles({
             color: 'white',
             fontWeight: 'bold',
             margin: '0'
+        }
+    },  
+    '@media (max-width: 933px)': {
+        inputs:{
+            display: 'block'
+        },
+        input50:{
+            width: '100%',
+        },
+        input100:{
+            width: '100%',
+        },
+        inputCustom:{
+            width: '100%',
+        },
+        fullInput50:{
+            width: '45%',
+        },
+        footer:{
+            display: 'flex',
+            margin: '0 10px',
+            '& p':{
+                color: '#b30202',
+                fontWeight: 'bold'
+            }
+        },
+        buttonsFooter:{
+            width: '70%',
+            display: 'flex'
         }
     }
 })

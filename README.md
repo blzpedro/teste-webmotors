@@ -20,6 +20,15 @@
             <li>npm start</li>
         </ol>
     </div>
+    <div>
+    <h2>Observações:</h2>
+    <div>
+        <ol>
+            <li>Devido a falta de algumas informações acabei não sabendo como prosseguir em certas partes.</li>
+            <li>Media queries realizadas no JSS e Styled Components</li>
+        </ol>
+    </div>
+    <div>
 </div>
 <hr/>
 <div align="center">
